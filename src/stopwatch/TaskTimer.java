@@ -24,7 +24,7 @@ public class TaskTimer {
 	 * @param task
 	 *            is the task to be run
 	 */
-	public void runTask(Runnable task) {
+	public void measureAndPrint(Runnable task) {
 		System.out.print(task.toString());
 		timer.start();
 		task.run();
