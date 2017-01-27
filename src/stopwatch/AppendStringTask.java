@@ -21,8 +21,8 @@ public class AppendStringTask implements Runnable {
 	}
 
 	/**
-	 * Add char 'a' to the String <i>n</i> times, which <i>n</i> = <b>size</b>.
-	 * And print the result length to the console.
+	 * Add char 'a' to the String until it reaches final size and print the
+	 * result length to the console.
 	 */
 	@Override
 	public void run() {
