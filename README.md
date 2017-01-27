@@ -26,7 +26,7 @@ When I tried double the number of chars added to the String, the elapsed time is
 ###Appending chars to StringBuilder
 This method is so much faster than adding normal Strings. `StringBuilder` will not create new String instance when using `append` method. StringBuilder has a char array inside, with a capacity of 16 initially. So adding String or char into this StringBuilder will just update the value inside the char[], and no memory is being used in this process (because the char[] already takes the memory for 16 char). But if the added String/char is exeeded the maximum capacity of the char[], now StringBuilder's char[] will allocate more memories (char[] capacity become (2 times + 2) bigger). So this means the StringBuilder only allocates more memories when the String goes beyond the limit, while normal String will allocate more memories everytime it is appended.
 ###Adding double
-Adding primitive `double` is a lot faster than the wrapper class `Double` and `BigDecimal`. Because `double` is a primitive, it does not contain any attributes or methods. So each `double` will consume less memory and faster than `Double` and `BigDecimal`.
+Adding primitive `double` is a lot faster than the wrapper class `Double` and `BigDecimal`. Because `double` is a primitive, it does not contain any attributes or methods. `double` variable also not storing every digit of decimals, sometimes it rounds the decimal places so it won't be too long. So each `double` will consume less memory and faster than `Double` and `BigDecimal`.
 ###Adding Double
 Adding wrapper class `Double` is slower than primitive `double` because `Double` is an object, which contains attributes and methods which takes memory.
 ###Adding BigDecimal
