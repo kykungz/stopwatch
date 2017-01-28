@@ -31,3 +31,4 @@ Adding primitive `double` is a lot faster than the wrapper class `Double` and `B
 Adding wrapper class `Double` is slower than primitive `double` because `Double` is an object, which contains attributes and methods which takes memory.
 ###Adding BigDecimal
 `BigDecimal` alone has a lot of attributes compare to `Double`. It also has a special process when adding numbers. Sometimes `double` gives you an inaccurate calculation, due to the computer's architecture. Unlike `Double` or `double`, `BigDecimal` is very accurate when dealing with decimals because each decimal digit is stored as is, no roundings. Each digit is kept individually, so longer decimal places means more memory consumption and the slower everything gets.
+# arrayiterator
