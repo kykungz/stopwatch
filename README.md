@@ -28,7 +28,7 @@ This method is so much faster than adding normal Strings. `StringBuilder` will n
 ###Adding double
 Adding primitive `double` is a lot faster than the wrapper class `Double` and `BigDecimal`. Because `double` is a primitive, it does not contain any attributes or methods. `double` variable also not storing every digit of decimals, sometimes it rounds the decimal places so it won't be too long. So each `double` will consume less memory and faster than `Double` and `BigDecimal`.
 ###Adding Double
-Adding wrapper class `Double` is slower than primitive `double` because `Double` is an object, which contains attributes and methods which takes memory.
+Adding wrapper class `Double` is slower than primitive `double` because `Double` is an object, which contains attributes and methods which takes memory. A wrapper class such as `Double` that performs a `+-/*` also needs to be unboxed into primitive inorder to perform the operation, and then wrap it back to Object again. The boxing-unboxing is quite expensive and make the program runs slower.
 ###Adding BigDecimal
 `BigDecimal` alone has a lot of attributes compare to `Double`. It also has a special process when adding numbers. Sometimes `double` gives you an inaccurate calculation, due to the computer's architecture. Unlike `Double` or `double`, `BigDecimal` is very accurate when dealing with decimals because each decimal digit is stored as is, no roundings. Each digit is kept individually, so longer decimal places means more memory consumption and the slower everything gets.
 # arrayiterator
