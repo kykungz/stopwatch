@@ -8,6 +8,7 @@ package stopwatch;
  */
 public class AppendStringBuilderTask implements Runnable {
 	private int size;
+	private final char CHAR = 'a';
 
 	/**
 	 * Initialize the AppendStringBuilderTask with a specific size. The size is
@@ -26,7 +27,6 @@ public class AppendStringBuilderTask implements Runnable {
 	 */
 	@Override
 	public void run() {
-		final char CHAR = 'a';
 		StringBuilder builder = new StringBuilder();
 		int k = 0;
 		while (k++ < size) {

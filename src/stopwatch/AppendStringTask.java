@@ -8,6 +8,7 @@ package stopwatch;
  */
 public class AppendStringTask implements Runnable {
 	private int size;
+	private final char CHAR = 'a';
 
 	/**
 	 * Initialize the AppendStringTask with a specific size. The size is the
@@ -26,7 +27,6 @@ public class AppendStringTask implements Runnable {
 	 */
 	@Override
 	public void run() {
-		final char CHAR = 'a';
 		String result = "";
 		int k = 0;
 		while (k++ < size) {

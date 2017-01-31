@@ -1,5 +1,7 @@
 package stopwatch;
 
+import java.math.BigDecimal;
+
 /**
  * Main class, perform some common tasks involving strings and doubles, to
  * compare speed of using different data types.
@@ -43,5 +45,6 @@ public class Main {
 		taskTimer.measureAndPrint(new SumBigDecimalTask(500000000));
 		taskTimer.measureAndPrint(new SumBigDecimalTask(1000000000));
 		taskTimer.measureAndPrint(new SumBigDecimalTask(2000000000));
+
 	}
 }

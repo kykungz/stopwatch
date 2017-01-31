@@ -12,6 +12,7 @@ public class SumBigDecimalTask implements Runnable {
 	static final int ARRAY_SIZE = 500000;
 
 	private int amount;
+	private BigDecimal[] values;
 
 	/**
 	 * Initialize SumBigDecimalTask by the amount.
@@ -21,6 +22,10 @@ public class SumBigDecimalTask implements Runnable {
 	 */
 	public SumBigDecimalTask(int amount) {
 		this.amount = amount;
+		// create array of values to add, before we start the timer
+		values = new BigDecimal[ARRAY_SIZE];
+		for (int i = 0; i < ARRAY_SIZE; i++)
+			values[i] = new BigDecimal(i + 1);
 	}
 
 	/**
@@ -30,10 +35,6 @@ public class SumBigDecimalTask implements Runnable {
 	 */
 	@Override
 	public void run() {
-		// create array of values to add, before we start the timer
-		BigDecimal[] values = new BigDecimal[ARRAY_SIZE];
-		for (int i = 0; i < ARRAY_SIZE; i++)
-			values[i] = new BigDecimal(i + 1);
 		BigDecimal sum = new BigDecimal(0.0);
 		for (int count = 0, i = 0; count < amount; count++, i++) {
 			if (i >= values.length)

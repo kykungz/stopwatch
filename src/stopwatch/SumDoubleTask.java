@@ -9,6 +9,7 @@ package stopwatch;
 public class SumDoubleTask implements Runnable {
 	static final int ARRAY_SIZE = 500000;
 	private int amount;
+	private Double[] values;
 
 	/**
 	 * Initialize SumDoubleTask by the amount.
@@ -18,6 +19,10 @@ public class SumDoubleTask implements Runnable {
 	 */
 	public SumDoubleTask(int amount) {
 		this.amount = amount;
+		// create array of values to add, before we start the timer
+		values = new Double[ARRAY_SIZE];
+		for (int i = 0; i < ARRAY_SIZE; i++)
+			values[i] = new Double(i + 1);
 	}
 
 	/**
@@ -27,10 +32,6 @@ public class SumDoubleTask implements Runnable {
 	 */
 	@Override
 	public void run() {
-		// create array of values to add, before we start the timer
-		Double[] values = new Double[ARRAY_SIZE];
-		for (int i = 0; i < ARRAY_SIZE; i++)
-			values[i] = new Double(i + 1);
 		Double sum = new Double(0.0);
 		// count = loop counter, i = array index
 		for (int count = 0, i = 0; count < amount; count++, i++) {
