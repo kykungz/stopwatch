@@ -25,10 +25,10 @@ public class TaskTimer {
 	 *            is the task to be run
 	 */
 	public void measureAndPrint(Runnable task) {
-		System.out.print(task.toString());
 		timer.start();
 		task.run();
 		timer.stop();
+		System.out.println(task.toString());
 		System.out.printf("Elapsed time %.6f sec\n\n", timer.getElapsed());
 	}
 }

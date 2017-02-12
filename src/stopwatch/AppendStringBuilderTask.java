@@ -9,6 +9,7 @@ package stopwatch;
 public class AppendStringBuilderTask implements Runnable {
 	private int size;
 	private final char CHAR = 'a';
+	private String result;
 
 	/**
 	 * Initialize the AppendStringBuilderTask with a specific size. The size is
@@ -33,8 +34,7 @@ public class AppendStringBuilderTask implements Runnable {
 			builder = builder.append(CHAR);
 		}
 		// now create a String from the result, to be compatible with task 1.
-		String result = builder.toString();
-		System.out.println("final string length = " + result.length());
+		result = builder.toString();
 	}
 
 	/**
@@ -44,7 +44,7 @@ public class AppendStringBuilderTask implements Runnable {
 	 */
 	@Override
 	public String toString() {
-		return String.format("Append %,d chars to StringBuilder\n", size);
+		return String.format("Append %,d chars to StringBuilder\n", size) + "final string length = " + result.length();
 
 	}
 

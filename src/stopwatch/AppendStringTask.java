@@ -9,6 +9,7 @@ package stopwatch;
 public class AppendStringTask implements Runnable {
 	private int size;
 	private final char CHAR = 'a';
+	private String result;
 
 	/**
 	 * Initialize the AppendStringTask with a specific size. The size is the
@@ -27,12 +28,11 @@ public class AppendStringTask implements Runnable {
 	 */
 	@Override
 	public void run() {
-		String result = "";
+		result = "";
 		int k = 0;
 		while (k++ < size) {
 			result = result + CHAR;
 		}
-		System.out.println("final string length = " + result.length());
 	}
 
 	/**
@@ -42,6 +42,7 @@ public class AppendStringTask implements Runnable {
 	 */
 	@Override
 	public String toString() {
-		return String.format("Append %,d chars to String\n", size);
+		return String.format("Append %,d chars to String\n", size) + ("final string length = " + result.length());
+
 	}
 }

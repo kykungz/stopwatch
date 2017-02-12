@@ -1,7 +1,5 @@
 package stopwatch;
 
-import java.math.BigDecimal;
-
 /**
  * Main class, perform some common tasks involving strings and doubles, to
  * compare speed of using different data types.
